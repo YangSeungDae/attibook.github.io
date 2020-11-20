@@ -3,10 +3,7 @@
 <script type = "text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 <meta charset="UTF-8">
 <title>Weather</title>
-</head>
-<body>
-<script>
-
+<script type = "text/javascript" >
 document.write('<b>양승대</b>님 ');
 document.write('오늘은 '+getTimeStamp());
 
@@ -34,10 +31,9 @@ function leadingZeros(n, digits) {
   }
   return zero + n;
 }
-
+</script>
 <div>
-
-
+<script>
 	$.getJSON('https://api.openweathermap.org/data/2.5/forecast?id=1835848&APPID=f8b8761c25df03a84389bdbb6a97a6c5&units=metric'
 			,function(data){
 		var $minTemp = data.list[0].main.temp_min;
@@ -62,8 +58,9 @@ function leadingZeros(n, digits) {
 		$('.cprobability').append($probability + "%");	
 	});
 	
-
 </script>
+</head>
+<body>
 
 <p style="display:inline;">현재 날씨는 </p><p style="display:inline;" class="ctype"></p>
 <p style="display:inline;" class="cprobability">강수확률 </p>
